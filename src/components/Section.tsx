@@ -70,7 +70,6 @@ export default function Section({
         listeners,
         transform,
         transition,
-        isDragging,
     } = useSortable({
         id: section.id,
         data: {

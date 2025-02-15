@@ -1,5 +1,4 @@
 import ISection from "@/types/Section";
-import ITask from "@/types/Task";
 import {
     DragEndEvent,
     DragOverEvent,

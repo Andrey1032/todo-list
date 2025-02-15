@@ -1,7 +1,6 @@
 "use client";
 
 import Section from "@/components/Section";
-import Task from "@/components/Task";
 import Button from "@/components/UI/Button/Button";
 import useDnd from "@/hooks/useDnd";
 import style from "@/styles/Desk.module.scss";
