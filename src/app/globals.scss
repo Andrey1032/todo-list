@@ -1,0 +1,39 @@
+:root {
+  --white: #ffffff;
+  --black: #171717;
+  --main: #82b6ff;
+  --gray: #DBDBDB;
+  --accent-yellow: #FEEA00;
+  --accent-orange: #ED6742;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.edit-mode {
+  width: 100%;
+  color: inherit;
+  border-radius: 5px;
+
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+
+  text-align: center;
+  outline: none;
+
+  &_align-s {
+    text-align: start;
+  }
+
+}

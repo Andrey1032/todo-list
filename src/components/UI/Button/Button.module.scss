@@ -1,0 +1,20 @@
+.button-add {
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--accent-orange);
+    background-color: var(--accent-orange);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.button-remove {
+    width: 25px;
+    height: 25px;
+    fill: var(--accent-orange);
+    cursor: pointer;
+}
+
+.button-trash {
+    cursor: pointer;
+}

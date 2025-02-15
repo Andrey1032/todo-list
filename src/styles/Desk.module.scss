@@ -1,0 +1,48 @@
+.desk {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 0;
+
+    &__header {
+        padding: 0 10px;
+        display: grid;
+        align-items: center;
+        color: var(--white);
+    }
+
+    &__title {
+        min-height: 1.2em;
+        min-width: 50%;
+        justify-self: center;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.427);
+    }
+
+    &__menu {
+        margin-top: 10px;
+        width: max-content;
+        justify-self: flex-end;
+    }
+
+    background: url("../../public/background.jpg");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.sections {
+    padding: 0 10px 0 5px;
+    margin-top: 20px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-auto-flow: column;
+    gap: 30px;
+    overflow: hidden;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+}
