@@ -1,21 +1,22 @@
 "use client";
 
+import { ReactNode } from "react";
 import DashCircle from "../../../../public/dash-circle.svg";
 import Trash from "../../../../public/trash3.svg";
 import style from "./Button.module.scss";
 
 interface IButton {
-    type: "add" | "remove" | "trash";
-    text?: string;
+    type?: "add" | "remove" | "trash";
+    children?: ReactNode,
     onClick: () => void;
 }
 
-export default function Button({ type, text, onClick }: IButton) {
+export default function Button({ type, children, onClick }: IButton) {
     switch (type) {
         case "add":
             return (
                 <button className={style["button-add"]} onClick={onClick}>
-                    + {text}
+                    + {children}
                 </button>
             );
         case "remove":
@@ -36,6 +37,10 @@ export default function Button({ type, text, onClick }: IButton) {
                 />
             );
         default:
-            return <button></button>;
+            return (
+                <button className={style["button-add"]} onClick={onClick}>
+                    {children}
+                </button>
+            );
     }
 }

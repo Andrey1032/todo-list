@@ -1,0 +1,74 @@
+.text {
+    font-family: var(--font-family-inter);
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: -0.04em;
+}
+
+.text_pos-center {
+    text-align: center;
+}
+
+.text_cr {
+    color: var(--red);
+}
+
+.text_cw {
+    color: var(--background);
+}
+
+.text_cg {
+    color: var(--color-gray);
+}
+
+.text_upp {
+    text-transform: uppercase;
+}
+
+.text_w-400 {
+    font-weight: 400;
+}
+
+.text_w-500 {
+    font-weight: 500;
+}
+
+.text_w-600 {
+    font-weight: 600;
+}
+
+.text_w-700 {
+    font-weight: 700;
+}
+
+.text_size-14 {
+    font-size: 14px;
+}
+
+.text_size-20 {
+    font-size: 20px;
+}
+
+.text_size-24 {
+    font-size: 24px;
+}
+
+.text_size-36 {
+    font-size: 36px;
+}
+
+.text_size-40 {
+    font-size: 40px;
+}
+
+.text_size-48 {
+    font-size: 48px;
+}
+
+.text_size-96 {
+    font-size: 96px;
+}
+
+.text_und-line {
+    text-decoration: underline;
+}

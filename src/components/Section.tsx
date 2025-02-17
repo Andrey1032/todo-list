@@ -55,7 +55,7 @@ export default function Section({
                               ...sec.tasks,
                               {
                                   id: v4(),
-                                  value: "Новая задача",
+                                  value: `Задача ${sec.tasks.length + 1}`,
                               },
                           ],
                       }
@@ -150,11 +150,9 @@ export default function Section({
                 </div>
 
                 <div className={style["section__button-add-task"]}>
-                    <Button
-                        type="add"
-                        text="Добавить задачу"
-                        onClick={() => createTask()}
-                    />
+                    <Button type="add" onClick={() => createTask()}>
+                        Добавить задачу
+                    </Button>
                 </div>
             </div>
         </section>

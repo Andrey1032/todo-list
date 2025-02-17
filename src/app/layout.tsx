@@ -21,7 +21,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ru">
-            <body className={`${badScript.variable}`}>{children}</body>
+            <body className={`${badScript.variable}`}>
+                <main>{children}</main>
+            </body>
         </html>
     );
 }
