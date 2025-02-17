@@ -3,9 +3,8 @@ import { SubmitHandler, useForm } from "react-hook-form";
 
 import { authService } from "@/services/auth/auth.service";
 
-import { IAuthForm } from "@/shared/types/auth.interface";
 import { PRIVATE_URL, PUBLIC_URL } from "@/config/url.config";
-import { getUserData } from "@/services/auth/auth-token.service";
+import { IAuthForm } from "@/types/auth.interface";
 
 export function useAuthForm(isReg?: boolean, refresh?: boolean) {
     const router = useRouter();
@@ -44,9 +43,8 @@ export function useAuthForm(isReg?: boolean, refresh?: boolean) {
 
         return authService
             .main(isReg ? "registration" : "login", data)
-            .then((data) => {
-                const user = getUserData(data?.data?.accessToken);
-                router.push(PRIVATE_URL.home("", user?.role));
+            .then(() => {
+                router.push(PRIVATE_URL.home(""));
             })
             .catch((e) =>
                 form.setError("apiError", {
