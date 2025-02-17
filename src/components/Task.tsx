@@ -31,9 +31,11 @@ export default function Task({
 
     const styleDnd = {
         transition,
+        touchAction: "none",
         transform: CSS.Transform.toString(transform),
     };
 
+    
     return (
         <div
             ref={setNodeRef}

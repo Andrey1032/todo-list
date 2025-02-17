@@ -64,22 +64,18 @@ export default function Section({
         );
     };
 
-    const {
-        setNodeRef,
-        attributes,
-        listeners,
-        transform,
-        transition,
-    } = useSortable({
-        id: section.id,
-        data: {
-            type: "Section",
-            section,
-        },
-    });
+    const { setNodeRef, attributes, listeners, transform, transition } =
+        useSortable({
+            id: section.id,
+            data: {
+                type: "Section",
+                section,
+            },
+        });
 
     const styleDnd = {
         transition,
+        touchAction: "none",
         transform: CSS.Transform.toString(transform),
     };
 
@@ -115,6 +111,9 @@ export default function Section({
                         className={style["section__title"]}
                         onDoubleClick={() => setEditMode(!editMode)}
                     >
+                        <div className={style["section__task-count"]}>
+                            {section.tasks.length}
+                        </div>
                         {editMode ? (
                             <input
                                 className={"edit-mode"}

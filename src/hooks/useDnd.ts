@@ -2,7 +2,6 @@ import ISection from "@/types/Section";
 import {
     DragEndEvent,
     DragOverEvent,
-    MouseSensor,
     PointerSensor,
     TouchSensor,
     useSensor,
@@ -142,13 +141,8 @@ function useDnd({ sections, setSections }: IUseDnd) {
         }),
         useSensor(TouchSensor, {
             activationConstraint: {
-                delay: 1000,
-                tolerance: 10,
-            },
-        }),
-        useSensor(MouseSensor, {
-            activationConstraint: {
-                distance: 2,
+                delay: 200,
+                tolerance: 5,
             },
         })
     );
